@@ -22,7 +22,7 @@ export default class RepoProperties extends Command {
     assistance: Flags.boolean({char: 'a', description: 'Show some extra assistance in using this command'}),
     // flag with a value (-n, --name=VALUE)
     input: Flags.string({char: 'i', description: 'Path to a CSV file containing the data to update in batch'}),
-    multiSelect: Flags.string({char: 'm', description: 'Case sensitive comma separated values of properties that are not strings', required: true}),
+    multiSelect: Flags.string({char: 'm', description: 'Case sensitive comma separated values of properties that are not strings', required: false, default: ''}),
     token: Flags.string({char: 't', description: 'GitHub personal API token with scopes needed for the operation', required: true}),
   }
 
